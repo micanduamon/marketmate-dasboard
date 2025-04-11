@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketMate Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <!-- Chart.js for graphs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>MarketMate</h2>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li class="active">
+                        <i class="fas fa-th-large"></i>
+                        <span>Dashboard</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Analytics</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-file-invoice"></i>
+                        <span>Invoice</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-calendar"></i>
+                        <span>Schedule</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Calendar</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>Messages</span>
+                        <span class="badge">49</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </li>
+                </ul>
+            </nav>
+            <div class="upgrade-card">
+                <img src="assets/icons/upgrade-illustration.svg" alt="Upgrade">
+                <button class="upgrade-btn">Upgrade Now</button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <h1>Dashboard</h1>
+                <div class="date-filter">
+                    <div class="date-range">
+                        <span>10-06-2023</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="date-range">
+                        <span>10-10-2023</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Stats Cards -->
+            <div class="stats-container">
+                <div class="stat-card">
+                    <i class="fas fa-star"></i>
+                    <div class="stat-info">
+                        <h3>178+</h3>
+                        <p>Save Products</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-box"></i>
+                    <div class="stat-info">
+                        <h3>20+</h3>
+                        <p>Stock Products</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-shopping-bag"></i>
+                    <div class="stat-info">
+                        <h3>190+</h3>
+                        <p>Sales Products</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-briefcase"></i>
+                    <div class="stat-info">
+                        <h3>12+</h3>
+                        <p>Job Application</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-container">
+                <div class="sales-chart">
+                    <div class="chart-header">
+                        <h2>Reports</h2>
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                    <div class="sales-stats">
+                        <div class="sales-point current">
+                            <div class="sales-dot"></div>
+                            <span>Sales</span>
+                            <h3>2,678</h3>
+                        </div>
+                        <div class="sales-trend">
+                            <span class="trend-up"><i class="fas fa-arrow-up"></i> 25.8%</span>
+                            <span class="trend-text">vs last month</span>
+                        </div>
+                    </div>
+                    <div class="sales-graph">
+                        <div class="graph-line">
+                            <svg viewBox="0 0 400 100">
+                                <defs>
+                                    <linearGradient id="lineGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.2" />
+                                        <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0" />
+                                    </linearGradient>
+                                </defs>
+                                <path d="M0,70 C50,60 100,20 150,35 S250,80 300,40 S400,30 400,50" class="line-path"></path>
+                                <path d="M0,70 C50,60 100,20 150,35 S250,80 300,40 S400,30 400,50 L400,100 L0,100 Z" class="area-path"></path>
+                                <circle cx="150" cy="35" r="6" class="point-current"></circle>
+                            </svg>
+                        </div>
+                        <div class="time-labels">
+                            <span>10am</span>
+                            <span>11am</span>
+                            <span>12pm</span>
+                            <span>01pm</span>
+                            <span>02pm</span>
+                            <span>03pm</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="analytics-chart">
+                    <div class="chart-header">
+                        <h2>Analytics</h2>
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                    <div class="donut-chart">
+                        <div class="donut-center">
+                            <h3>80%</h3>
+                            <p>Total Sales</p>
+                        </div>
+                        <svg viewBox="0 0 100 100" class="donut">
+                            <circle cx="50" cy="50" r="40" class="donut-ring"></circle>
+                            <circle cx="50" cy="50" r="40" class="donut-segment blue" stroke-dasharray="251.2 0"></circle>
+                            <circle cx="50" cy="50" r="40" class="donut-segment yellow" stroke-dasharray="37.68 251.2"></circle>
+                            <circle cx="50" cy="50" r="40" class="donut-segment red" stroke-dasharray="25.12 288.88"></circle>
+                        </svg>
+                    </div>
+                    <div class="analytics-legend">
+                        <div class="legend-item">
+                            <span class="legend-dot blue"></span>
+                            <span>Sale</span>
+                            <span class="legend-value">80%</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot yellow"></span>
+                            <span>Distribute</span>
+                            <span class="legend-value">12%</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot red"></span>
+                            <span>Return</span>
+                            <span class="legend-value">8%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Orders Table -->
+            <div class="orders-section">
+                <div class="section-header">
+                    <h2>Recent Orders</h2>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <table class="orders-table">
+                    <thead>
+                        <tr>
+                            <th>Tracking no</th>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Total Order</th>
+                            <th>Total Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Table rows will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <div class="top-products">
+                <div class="section-header">
+                    <h2>Top Selling Products</h2>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="product-list">
+                    <!-- Products will be populated by JavaScript -->
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html> 
